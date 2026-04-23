@@ -628,12 +628,12 @@
       <div class="feat reveal up d1">
         <div class="feat-icon c">🎯</div>
         <div class="feat-name">Aimbot</div>
-        <p class="feat-desc">Humanized aim assistance with adjustable FOV, smooth factor, bone priority, and RCS. Supports per-weapon configs and auto-pitch correction.</p>
+        <p class="feat-desc">Humanized aim assistance with adjustable FOV, smooth factor, and bone priority. Supports per-weapon configs and auto-pitch correction.</p>
       </div>
       <div class="feat reveal up d2">
         <div class="feat-icon p">👁</div>
-        <div class="feat-name">ESP / Wallhack</div>
-        <p class="feat-desc">Render enemy positions through walls with box ESP, skeleton, health bars, distance, weapon info, and team-colored highlights.</p>
+        <div class="feat-name">ESP</div>
+        <p class="feat-desc">Render enemy positions through walls with box ESP, skeleton, health bars, distance, weapon info, and more.</p>
       </div>
       <div class="feat reveal up d3">
         <div class="feat-icon r">⚡</div>
@@ -647,12 +647,12 @@
       </div>
       <div class="feat reveal up d5">
         <div class="feat-icon p">🗺</div>
-        <div class="feat-name">Radar Hack</div>
+        <div class="feat-name">Radar</div>
         <p class="feat-desc">Force all enemies to appear on the in-game radar at all times, regardless of line of sight or sound. Essential for intel.</p>
       </div>
       <div class="feat reveal up d6">
         <div class="feat-icon r">🔫</div>
-        <div class="feat-name">No Recoil / No Spread</div>
+        <div class="feat-name">Standalone RCS</div>
         <p class="feat-desc">Compensate or eliminate weapon recoil patterns and spray spread with per-weapon adjustments and RCS multiplier sliders.</p>
       </div>
     </div>
@@ -815,7 +815,6 @@
     showcaseVisual.style.transform = `translateY(${delta * -18}px)`;
   }, { passive: true });
 
-  /* ── Apple-style section parallax ── */
   const heroContent = document.querySelector('.hero-content');
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
@@ -823,7 +822,6 @@
     heroContent.style.opacity   = Math.max(0, 1 - y / 500);
   }, { passive: true });
 
-  /* ── Form handler ── */
   function handleForm(e) {
     e.preventDefault();
     const btn = e.target.querySelector('button');
@@ -833,7 +831,6 @@
     setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; e.target.reset(); }, 3000);
   }
 
-  /* ── Active nav link on scroll ── */
   const sections = ['home','features','download','contact'];
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY + 120;
